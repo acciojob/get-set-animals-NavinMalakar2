@@ -1,25 +1,29 @@
-//complete this code
-class Animal {}
+// Base class
+class Animal {
+  constructor(species) {
+    this._species = species;
+  }
 
-class Dog extends Animal {
-	constructor(species){
-		this._species = species
-	}
-	get species(){
-	return this._species;
-	}
-	macksound(){
-		console.log(`the ${._species}`makes a sound)
-	}
+  // Getter for species
+  get species() {
+    return this._species;
+  }
+
+  // Common method
+  makeSound() {
+    console.log(`The ${this._species} makes a sound`);
+  }
 }
 
+// Cat class
 class Cat extends Animal {
-	purr() {
+  purr() {
     console.log("purr");
   }
 }
+
+// Dog class
 class Dog extends Animal {
-  // Method specific to Dog
   bark() {
     console.log("woof");
   }
